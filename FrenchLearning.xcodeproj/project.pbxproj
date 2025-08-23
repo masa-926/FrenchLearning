@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EB64724D2E5A1138000D19F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB64724C2E5A1138000D19F7 /* Assets.xcassets */; };
+		EB9BF0462E5A21120049F1C3 /* FrenchLearning App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0452E5A21120049F1C3 /* FrenchLearning App.swift */; };
+		EB9BF0482E5A213E0049F1C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0472E5A213E0049F1C3 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,12 @@
 		EB64724C2E5A1138000D19F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB6472522E5A1138000D19F7 /* FrenchLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB64725C2E5A1138000D19F7 /* FrenchLearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchLearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9BF0442E5A21120049F1C3 /* FrenchLearning-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrenchLearning-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB9BF0452E5A21120049F1C3 /* FrenchLearning App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrenchLearning App.swift"; sourceTree = "<group>"; };
+		EB9BF0472E5A213E0049F1C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		EB6472472E5A1136000D19F7 /* FrenchLearning */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FrenchLearning;
-			sourceTree = "<group>";
-		};
 		EB6472552E5A1138000D19F7 /* FrenchLearningTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FrenchLearningTests;
@@ -80,11 +80,13 @@
 		EB64723C2E5A1136000D19F7 = {
 			isa = PBXGroup;
 			children = (
-				EB6472472E5A1136000D19F7 /* FrenchLearning */,
+				EB9BF0472E5A213E0049F1C3 /* ContentView.swift */,
+				EB9BF0452E5A21120049F1C3 /* FrenchLearning App.swift */,
 				EB64724C2E5A1138000D19F7 /* Assets.xcassets */,
 				EB6472552E5A1138000D19F7 /* FrenchLearningTests */,
 				EB64725F2E5A1138000D19F7 /* FrenchLearningUITests */,
 				EB6472462E5A1136000D19F7 /* Products */,
+				EB9BF0442E5A21120049F1C3 /* FrenchLearning-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,9 +114,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				EB6472472E5A1136000D19F7 /* FrenchLearning */,
 			);
 			name = FrenchLearning;
 			packageProductDependencies = (
@@ -181,6 +180,7 @@
 				TargetAttributes = {
 					EB6472442E5A1136000D19F7 = {
 						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
 					};
 					EB6472512E5A1138000D19F7 = {
 						CreatedOnToolsVersion = 16.4;
@@ -243,6 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9BF0482E5A213E0049F1C3 /* ContentView.swift in Sources */,
+				EB9BF0462E5A21120049F1C3 /* FrenchLearning App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76WX2X9L7G;
@@ -420,6 +423,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.masato.FrenchLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FrenchLearning-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -430,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76WX2X9L7G;
@@ -448,6 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.masato.FrenchLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FrenchLearning-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
