@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EB64724D2E5A1138000D19F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB64724C2E5A1138000D19F7 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EB6472532E5A1138000D19F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -25,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		EB6472452E5A1136000D19F7 /* FrenchLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB64724C2E5A1138000D19F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB6472522E5A1138000D19F7 /* FrenchLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB64725C2E5A1138000D19F7 /* FrenchLearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchLearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6472472E5A1136000D19F7 /* FrenchLearning */,
+				EB64724C2E5A1138000D19F7 /* Assets.xcassets */,
 				EB6472552E5A1138000D19F7 /* FrenchLearningTests */,
 				EB64725F2E5A1138000D19F7 /* FrenchLearningUITests */,
 				EB6472462E5A1136000D19F7 /* Products */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB64724D2E5A1138000D19F7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
