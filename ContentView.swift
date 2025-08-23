@@ -10,20 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            VStack(spacing: 16) {
-                Text("FrenchLearning")
-                    .font(.title).bold()
-                Text("ここから機能を足していきます")
-                    .foregroundStyle(.secondary)
+            VStack(spacing: 20) {
+                NavigationLink("単語学習") { WordTrainerView() }
+                    .buttonStyle(.borderedProminent)
+
+                NavigationLink("クイズ（後で）") { Text("次フェーズ") }
+                    .buttonStyle(.bordered)
+
+                NavigationLink("文章添削（後で）") { Text("次フェーズ") }
+                    .buttonStyle(.bordered)
+
+                Spacer()
             }
             .padding()
-            .navigationTitle("Home")
+            .navigationTitle("FrenchLearning")
         }
     }
 }
 
-#Preview {
-    ContentView()
-}
-
-
+#Preview { ContentView() }

@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		EB64724D2E5A1138000D19F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB64724C2E5A1138000D19F7 /* Assets.xcassets */; };
-		EB9BF0462E5A21120049F1C3 /* FrenchLearning App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0452E5A21120049F1C3 /* FrenchLearning App.swift */; };
 		EB9BF0482E5A213E0049F1C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0472E5A213E0049F1C3 /* ContentView.swift */; };
+		EB9BF04C2E5A22660049F1C3 /* Words: VocabWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF04B2E5A22660049F1C3 /* Words: VocabWord.swift */; };
+		EB9BF0502E5A22C70049F1C3 /* Features: Home: HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF04F2E5A22C70049F1C3 /* Features: Home: HomeView.swift */; };
+		EB9BF0522E5A22EA0049F1C3 /* WordTrainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0512E5A22EA0049F1C3 /* WordTrainerView.swift */; };
+		EB9BF0542E5A23020049F1C3 /* WordTrainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0532E5A23020049F1C3 /* WordTrainerViewModel.swift */; };
+		EB9BF0562E5A23110049F1C3 /* Services: ProgressStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0552E5A23110049F1C3 /* Services: ProgressStore.swift */; };
+		EB9BF0582E5A23430049F1C3 /* Resources: wordset_fr_ja.json in Resources */ = {isa = PBXBuildFile; fileRef = EB9BF0572E5A23430049F1C3 /* Resources: wordset_fr_ja.json */; };
+		EB9BF05B2E5A23990049F1C3 /* App: FrenchLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF05A2E5A23990049F1C3 /* App: FrenchLearningApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +41,14 @@
 		EB6472522E5A1138000D19F7 /* FrenchLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB64725C2E5A1138000D19F7 /* FrenchLearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchLearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9BF0442E5A21120049F1C3 /* FrenchLearning-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrenchLearning-Bridging-Header.h"; sourceTree = "<group>"; };
-		EB9BF0452E5A21120049F1C3 /* FrenchLearning App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrenchLearning App.swift"; sourceTree = "<group>"; };
 		EB9BF0472E5A213E0049F1C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EB9BF04B2E5A22660049F1C3 /* Words: VocabWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Words: VocabWord.swift"; sourceTree = "<group>"; };
+		EB9BF04F2E5A22C70049F1C3 /* Features: Home: HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Features: Home: HomeView.swift"; sourceTree = "<group>"; };
+		EB9BF0512E5A22EA0049F1C3 /* WordTrainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTrainerView.swift; sourceTree = "<group>"; };
+		EB9BF0532E5A23020049F1C3 /* WordTrainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTrainerViewModel.swift; sourceTree = "<group>"; };
+		EB9BF0552E5A23110049F1C3 /* Services: ProgressStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services: ProgressStore.swift"; sourceTree = "<group>"; };
+		EB9BF0572E5A23430049F1C3 /* Resources: wordset_fr_ja.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Resources: wordset_fr_ja.json"; sourceTree = "<group>"; };
+		EB9BF05A2E5A23990049F1C3 /* App: FrenchLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App: FrenchLearningApp.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,8 +92,12 @@
 		EB64723C2E5A1136000D19F7 = {
 			isa = PBXGroup;
 			children = (
+				EB9BF05F2E5A24050049F1C3 /* Resources */,
+				EB9BF05E2E5A23F20049F1C3 /* Service */,
+				EB9BF05D2E5A23CF0049F1C3 /* Words */,
+				EB9BF05C2E5A23A70049F1C3 /* Features */,
+				EB9BF0592E5A23510049F1C3 /* App */,
 				EB9BF0472E5A213E0049F1C3 /* ContentView.swift */,
-				EB9BF0452E5A21120049F1C3 /* FrenchLearning App.swift */,
 				EB64724C2E5A1138000D19F7 /* Assets.xcassets */,
 				EB6472552E5A1138000D19F7 /* FrenchLearningTests */,
 				EB64725F2E5A1138000D19F7 /* FrenchLearningUITests */,
@@ -98,6 +114,48 @@
 				EB64725C2E5A1138000D19F7 /* FrenchLearningUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EB9BF0592E5A23510049F1C3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EB9BF05A2E5A23990049F1C3 /* App: FrenchLearningApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EB9BF05C2E5A23A70049F1C3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EB9BF04F2E5A22C70049F1C3 /* Features: Home: HomeView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EB9BF05D2E5A23CF0049F1C3 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				EB9BF04B2E5A22660049F1C3 /* Words: VocabWord.swift */,
+				EB9BF0512E5A22EA0049F1C3 /* WordTrainerView.swift */,
+				EB9BF0532E5A23020049F1C3 /* WordTrainerViewModel.swift */,
+			);
+			path = Words;
+			sourceTree = "<group>";
+		};
+		EB9BF05E2E5A23F20049F1C3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EB9BF0552E5A23110049F1C3 /* Services: ProgressStore.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EB9BF05F2E5A24050049F1C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB9BF0572E5A23430049F1C3 /* Resources: wordset_fr_ja.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB64724D2E5A1138000D19F7 /* Assets.xcassets in Resources */,
+				EB9BF0582E5A23430049F1C3 /* Resources: wordset_fr_ja.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,8 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9BF0542E5A23020049F1C3 /* WordTrainerViewModel.swift in Sources */,
+				EB9BF05B2E5A23990049F1C3 /* App: FrenchLearningApp.swift in Sources */,
+				EB9BF0562E5A23110049F1C3 /* Services: ProgressStore.swift in Sources */,
+				EB9BF04C2E5A22660049F1C3 /* Words: VocabWord.swift in Sources */,
+				EB9BF0502E5A22C70049F1C3 /* Features: Home: HomeView.swift in Sources */,
 				EB9BF0482E5A213E0049F1C3 /* ContentView.swift in Sources */,
-				EB9BF0462E5A21120049F1C3 /* FrenchLearning App.swift in Sources */,
+				EB9BF0522E5A22EA0049F1C3 /* WordTrainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
