@@ -8,6 +8,10 @@ struct WordTrainerView: View {
     @AppStorage("tts.autoplay") private var ttsAutoplay: Bool = true
     @State private var lastSpokenWordID: String? = nil
 
+    // カウントダウン用
+    @State private var now = Date()
+    private let tick = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
         VStack(spacing: 24) {
             if let w = vm.current {
@@ -79,8 +83,42 @@ struct WordTrainerView: View {
                 .padding(.top, 8)
 
                 Spacer()
+
             } else {
-                Text("単語データが読み込めませんでした。")
+                // ここに“待ち画面”を出す（SRS ON で単語はあるが current が無い＝今は復習なし）
+                if srsEnabled, !vm.words.isEmpty {
+                    VStack(spacing: 12) {
+                        Text("今は復習対象がありません").font(.title3.bold())
+                        if let next = SRSStore.shared.nextDueDate(from: vm.words, now: now) {
+                            Text("次の復習まで: \(countdownString(to: next))")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        } else {
+                            Text("しばらくしてからまた開いてください。")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        HStack {
+                            Button {
+                                vm.pickRandomIgnoringSRS()   // すぐ学びたい
+                            } label: {
+                                Label("今すぐランダムで学習", systemImage: "sparkles")
+                            }
+                            .buttonStyle(.borderedProminent)
+
+                            Button {
+                                vm.alignToSRSIfNeeded()      // 再チェック
+                            } label: {
+                                Label("更新", systemImage: "arrow.clockwise")
+                            }
+                            .buttonStyle(.bordered)
+                        }
+                    }
+                    Spacer()
+                } else {
+                    Text("単語データが読み込めませんでした。")
+                    Spacer()
+                }
             }
         }
         .padding()
@@ -97,6 +135,8 @@ struct WordTrainerView: View {
                 }
             }
         }
+        // カウントダウン更新
+        .onReceive(tick) { now = $0 }
 
         // iOS 17 の新API版 onChange（旧版は非推奨）
         .onChange(of: vm.current?.id, initial: false) { _, newID in
@@ -109,6 +149,17 @@ struct WordTrainerView: View {
         }
 
         .onDisappear { SpeechService.shared.stop() }
+    }
+
+    // 残り時間を「hh:mm:ss / mm:ss / まもなく」で表示
+    private func countdownString(to date: Date) -> String {
+        let diff = Int(date.timeIntervalSince(now))
+        if diff <= 0 { return "まもなく" }
+        let h = diff / 3600
+        let m = (diff % 3600) / 60
+        let s = diff % 60
+        if h > 0 { return String(format: "%02d:%02d:%02d", h, m, s) }
+        return String(format: "%02d:%02d", m, s)
     }
 }
 

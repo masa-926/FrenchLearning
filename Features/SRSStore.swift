@@ -75,5 +75,10 @@ final class SRSStore {
     func dueWords(from words: [VocabWord], now: Date = Date()) -> [VocabWord] {
         words.filter { isDue($0.id, now: now) }
     }
+    /// 単語配列から「次に来る復習日の最小値」を返す（今より先だけ）
+    func nextDueDate(from words: [VocabWord], now: Date = Date()) -> Date? {
+        let futureDues = words.map { state(for: $0.id).due }.filter { $0 > now }
+        return futureDues.min()
+    }
 }
 

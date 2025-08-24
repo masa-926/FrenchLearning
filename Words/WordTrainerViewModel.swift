@@ -86,6 +86,18 @@ final class WordTrainerViewModel: ObservableObject {
         }
     }
 
+    /// SRSを無視してランダムな単語へ移動（緊急用）
+    @MainActor
+    func pickRandomIgnoringSRS() {
+        guard !words.isEmpty else { return }
+        if let w = words.randomElement(),
+           let i = words.firstIndex(where: { $0.id == w.id }) {
+            index = i
+            showMeaning = false
+            ProgressStore.shared.currentIndex = index
+        }
+    }
+
     /// 初回表示時に、SRSが有効なら復習対象に合わせて current を調整
     @MainActor
     func alignToSRSIfNeeded() {
