@@ -1,14 +1,9 @@
-//
-//  Features:Proofread:ProofreadView.swift
-//  FrenchLearning
-//
-//  Created by 藤原匡都 on 2025/08/24.
-//
 
 import SwiftUI
 
 struct ProofreadView: View {
     @StateObject var vm = ProofreadViewModel()
+    @AppStorage("openai.dailyLimit") private var dailyLimit: Int = 20  // ← ここ（struct直下）
 
     var body: some View {
         VStack(spacing: 16) {
@@ -23,11 +18,16 @@ struct ProofreadView: View {
                 if vm.isLoading {
                     ProgressView()
                 } else {
-                    Text("AIに添削してもらう（モック）")
+                    Text("AIに添削してもらう") // モックでも本番でも共通でOK
                 }
             }
             .buttonStyle(.borderedProminent)
             .disabled(vm.isLoading)
+
+            // ここは“ビューの中”なのでOK（プロパティ宣言は書かない）
+            Text("本日の残り: \(DailyQuotaStore.shared.remaining(limit: dailyLimit)) 回")
+                .font(.caption)
+                .foregroundStyle(.secondary)
 
             if let r = vm.result {
                 // 差分ハイライトを生成
@@ -49,9 +49,8 @@ struct ProofreadView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
 
-
             if let err = vm.error {
-                Text(err).foregroundColor(.red) // foregroundStyle(.red) でもOK
+                Text(err).foregroundColor(.red)
             }
 
             Spacer()

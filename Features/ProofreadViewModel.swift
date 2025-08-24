@@ -16,11 +16,19 @@ final class ProofreadViewModel: ObservableObject {
 
     private let client = OpenAIClient()
     @AppStorage("openai.mockEnabled") private var mockEnabled: Bool = false
+    @AppStorage("openai.dailyLimit") var dailyLimit: Int = 20   // ← 追加（デフォ20回/日）
 
     @MainActor
     func send() async {
         let text = input.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty else { return }
+
+        // モックOFF時のみ上限を適用
+        if !mockEnabled && DailyQuotaStore.shared.countToday >= dailyLimit {
+            error = "今日は上限 \(dailyLimit) 回に達しました（設定＞利用制限で変更できます）。"
+            return
+        }
+
         isLoading = true; error = nil
         defer { isLoading = false }
 
@@ -30,12 +38,13 @@ final class ProofreadViewModel: ObservableObject {
         }
 
         do {
-            self.result = try await client.proofread(text: text)
+            let r = try await client.proofread(text: text)
+            self.result = r
+            _ = DailyQuotaStore.shared.increment()   // 成功時にカウント
         } catch let e as OpenAIClient.APIError {
             switch e {
             case .insufficientQuota:
-                self.error = "クレジット残高が不足しています（429）。Billingでクレジットを追加してください。今はモック結果を表示します。"
-                self.result = Self.mock(for: text)
+                self.error = "クレジット残高が不足しています（429）。Billingでクレジット追加後にお試しください。"
             default:
                 self.error = e.localizedDescription
             }
