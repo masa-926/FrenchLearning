@@ -14,19 +14,18 @@ struct SettingsView: View {
         Form {
             Section("OpenAI") {
                 SecureField("APIキー", text: $apiKey)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
                 Text(apiKey.isEmpty ? "未設定" : "設定済み")
-                    .foregroundStyle(.secondary)
                     .font(.caption)
+                    .foregroundStyle(.secondary)
             }
             Section {
                 Button(role: .destructive) {
                     ProgressStore.shared.currentIndex = 0
-                } label: {
-                    Text("単語学習の進捗をリセット")
-                }
+                } label: { Text("単語学習の進捗をリセット") }
             }
         }
         .navigationTitle("設定")
     }
 }
-
