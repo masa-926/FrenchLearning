@@ -4,12 +4,18 @@
 //
 //  Created by 藤原匡都 on 2025/08/24.
 //
+
 import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("openai.apiKey") private var apiKey: String = ""
     @AppStorage("openai.mockEnabled") private var mockEnabled: Bool = false
     @AppStorage("openai.dailyLimit") private var dailyLimit: Int = 20
+
+    // 音声設定
+    @AppStorage("tts.enabled") private var ttsEnabled: Bool = true
+    @AppStorage("tts.lang") private var ttsLang: String = "fr-FR"   // fr-FR / fr-CA など
+    @AppStorage("tts.rate") private var ttsRate: Double = 0.45      // 0.2〜0.6 推奨
 
     var body: some View {
         Form {
@@ -21,6 +27,7 @@ struct SettingsView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
+
             Section("利用制限") {
                 Stepper("1日の上限: \(dailyLimit) 回", value: $dailyLimit, in: 1...200)
                 Text("本日の残り: \(DailyQuotaStore.shared.remaining(limit: dailyLimit)) 回")
@@ -30,9 +37,33 @@ struct SettingsView: View {
                     DailyQuotaStore.shared.resetToday()
                 }
             }
+
+            Section("音声（単語カード）") {
+                Toggle("読み上げを有効にする", isOn: $ttsEnabled)
+                Picker("言語", selection: $ttsLang) {
+                    Text("フランス語（フランス）").tag("fr-FR")
+                    Text("フランス語（カナダ）").tag("fr-CA")
+                }
+                .pickerStyle(.segmented)
+
+                VStack(alignment: .leading) {
+                    Slider(value: $ttsRate, in: 0.2...0.6, step: 0.05)
+                    Text("速度: \(String(format: "%.2f", ttsRate))")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                Button {
+                    SpeechService.shared.speak("Bonjour ! Je suis ravi de vous aider.", lang: ttsLang)
+                } label: {
+                    Label("プレビュー再生", systemImage: "play.circle")
+                }
+            }
+
             Section("開発用") {
                 Toggle("AIをモックで動かす", isOn: $mockEnabled)
             }
+
             Section {
                 Button(role: .destructive) {
                     ProgressStore.shared.currentIndex = 0
@@ -44,3 +75,4 @@ struct SettingsView: View {
         .navigationTitle("設定")
     }
 }
+

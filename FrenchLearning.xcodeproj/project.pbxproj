@@ -25,6 +25,7 @@
 		EB9BF06E2E5AFB5C0049F1C3 /* DailyQuotaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF06D2E5AFB5C0049F1C3 /* DailyQuotaStore.swift */; };
 		EB9BF0702E5AFDC50049F1C3 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF06F2E5AFDC50049F1C3 /* NetworkMonitor.swift */; };
 		EB9BF0722E5AFDEE0049F1C3 /* Common:OfflineBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0712E5AFDED0049F1C3 /* Common:OfflineBanner.swift */; };
+		EB9BF0742E5AFFD10049F1C3 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0732E5AFFD10049F1C3 /* SpeechService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EB9BF06D2E5AFB5C0049F1C3 /* DailyQuotaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotaStore.swift; sourceTree = "<group>"; };
 		EB9BF06F2E5AFDC50049F1C3 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		EB9BF0712E5AFDED0049F1C3 /* Common:OfflineBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common:OfflineBanner.swift"; sourceTree = "<group>"; };
+		EB9BF0732E5AFFD10049F1C3 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -173,6 +175,7 @@
 				EB9BF06B2E5AFA170049F1C3 /* DiffHighlighter.swift */,
 				EB9BF06D2E5AFB5C0049F1C3 /* DailyQuotaStore.swift */,
 				EB9BF06F2E5AFDC50049F1C3 /* NetworkMonitor.swift */,
+				EB9BF0732E5AFFD10049F1C3 /* SpeechService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				EB9BF06A2E5AE7E20049F1C3 /* OpenAIClient.swift in Sources */,
 				EB9BF06C2E5AFA170049F1C3 /* DiffHighlighter.swift in Sources */,
 				EB9BF0482E5A213E0049F1C3 /* ContentView.swift in Sources */,
+				EB9BF0742E5AFFD10049F1C3 /* SpeechService.swift in Sources */,
 				EB9BF0522E5A22EA0049F1C3 /* WordTrainerView.swift in Sources */,
 				EB9BF0622E5AE45D0049F1C3 /* SettingsView.swift in Sources */,
 			);
