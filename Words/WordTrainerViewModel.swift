@@ -52,8 +52,10 @@ final class WordTrainerViewModel: ObservableObject {
     // MARK: - 既存操作
     @MainActor func reveal() { showMeaning = true }
 
-    @MainActor func next() {
+    @MainActor
+    func next() {
         guard !words.isEmpty else { return }
+        if index < 0 { index = 0 }           // "待ち" から通常に戻るときの安全策
         showMeaning = false
         index = (index + 1) % words.count
         ProgressStore.shared.currentIndex = index
@@ -77,12 +79,17 @@ final class WordTrainerViewModel: ObservableObject {
     private func loadNextDue() {
         guard srsEnabled else { return } // SRS無効なら何もしない（next()を使う）
         let due = srs.dueWords(from: words)
-        // 今と同じIDはスキップ
+
         if let next = due.first(where: { $0.id != current?.id }),
            let i = words.firstIndex(where: { $0.id == next.id }) {
+            // 復習すべき単語がある → その単語へ移動
             index = i
             showMeaning = false
             ProgressStore.shared.currentIndex = index
+        } else {
+            // 復習対象が無い → "待ち" 状態に遷移（currentがnilになる）
+            index = -1
+            showMeaning = false
         }
     }
 
