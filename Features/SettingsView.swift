@@ -14,8 +14,8 @@ struct SettingsView: View {
 
     // 音声設定
     @AppStorage("tts.enabled") private var ttsEnabled: Bool = true
-    @AppStorage("tts.lang") private var ttsLang: String = "fr-FR"   // fr-FR / fr-CA など
-    @AppStorage("tts.rate") private var ttsRate: Double = 0.45      // 0.2〜0.6 推奨
+    @AppStorage("tts.lang") private var ttsLang: String = "fr-FR"
+    @AppStorage("tts.rate") private var ttsRate: Double = 0.45
 
     var body: some View {
         Form {
@@ -75,4 +75,3 @@ struct SettingsView: View {
         .navigationTitle("設定")
     }
 }
-

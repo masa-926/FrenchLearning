@@ -5,8 +5,10 @@
 //  Created by 藤原匡都 on 2025/08/24.
 //
 
+// Services/OpenAIClient.swift
 import Foundation
 
+/// OpenAI Responses API クライアント（JSON構造の校正結果を取得）
 final class OpenAIClient {
     enum APIError: Error, LocalizedError {
         case missingAPIKey
@@ -14,13 +16,19 @@ final class OpenAIClient {
         case emptyOutput
         case decodeFailed(String)
         case insufficientQuota
+
         var errorDescription: String? {
             switch self {
-            case .missingAPIKey: return "APIキーが未設定です（設定画面で保存してください）。"
-            case .invalidStatus(let code, let body): return "サーバーエラー (\(code))：\(body)"
-            case .emptyOutput: return "AIの出力が空でした。"
-            case .decodeFailed(let s): return "JSONの解析に失敗しました：\(s)"
-            case .insufficientQuota: return "クレジット残高が不足しています（insufficient_quota）。"
+            case .missingAPIKey:
+                return "APIキーが未設定です（設定画面で保存してください）。"
+            case .invalidStatus(let code, let body):
+                return "サーバーエラー (\(code))：\(body)"
+            case .emptyOutput:
+                return "AIの出力が空でした。"
+            case .decodeFailed(let s):
+                return "JSONの解析に失敗しました：\(s)"
+            case .insufficientQuota:
+                return "クレジット残高が不足しています（insufficient_quota）。"
             }
         }
     }
@@ -30,7 +38,9 @@ final class OpenAIClient {
             .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    /// フランス語の文章を校正 → {corrected, explanations[]} のJSONを返す
+    /// フランス語の文章を校正 → { corrected, explanations[] } を返す
+    /// - Note: Responses API では JSON 強制は `text.format`、入力は `input_text` を使用します。
+    ///         参考: Structured Outputs / Migrate to Responses（公式ドキュメント）
     func proofread(text: String) async throws -> ProofreadResult {
         guard let key = apiKey, !key.isEmpty else { throw APIError.missingAPIKey }
 
@@ -40,7 +50,7 @@ final class OpenAIClient {
         req.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization")
         req.timeoutInterval = 30
 
-        // Responses API: input_text + text.format で Structured Outputs
+        // Responses API: input は input_text、Structured Outputs は text.format に JSON Schema
         let body: [String: Any] = [
             "model": "gpt-4o-mini",
             "input": [
@@ -91,7 +101,8 @@ JSONスキーマ：
             ],
             "max_output_tokens": 300
         ]
-        req.httpBody = try JSONSerialization.data(withJSONObject: body)
+
+        req.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
 
         let (data, resp) = try await URLSession.shared.data(for: req)
         guard let http = resp as? HTTPURLResponse else { throw APIError.emptyOutput }
@@ -103,7 +114,7 @@ JSONスキーマ：
             throw APIError.invalidStatus(http.statusCode, bodyStr)
         }
 
-        // 出力テキストを取り出し
+        // Responses API: 便利フィールド output_text を優先、無ければ output[].content[].text を連結
         let root = try JSONSerialization.jsonObject(with: data) as? [String: Any]
         var textJSON: String?
         if let t = root?["output_text"] as? String {
@@ -118,7 +129,7 @@ JSONスキーマ：
         guard var payload = textJSON?.trimmingCharacters(in: .whitespacesAndNewlines),
               !payload.isEmpty else { throw APIError.emptyOutput }
 
-        // ```json ... ``` フェンス除去（念のため）
+        // 念のため ```json フェンスを剥がす
         if let s = payload.range(of: "```"),
            let e = payload.range(of: "```", range: s.upperBound..<payload.endIndex) {
             payload = String(payload[s.upperBound..<e.lowerBound])
@@ -134,3 +145,4 @@ JSONスキーマ：
         }
     }
 }
+

@@ -21,10 +21,12 @@ final class WordTrainerViewModel: ObservableObject {
     init() { load() }
 
     func load() {
-        // 1) ファイル存在チェック
+        let sp = Log.perf.beginInterval("LoadWords")
+        defer { Log.perf.endInterval("LoadWords", sp) }
+
         guard let url = Bundle.main.url(forResource: "wordset_fr_ja", withExtension: "json") else {
-            let allJson = Bundle.main.paths(forResourcesOfType: "json", inDirectory: nil)
-            print("⚠️ JSONが見つかりません。Bundle内のjson一覧:", allJson)
+            let allJson = Bundle.main.paths(forResourcesOfType: "json", inDirectory: nil).joined(separator: ", ")
+            Log.words.error("JSON not found. bundle jsons=\(allJson, privacy: .public)")
             fallback()
             return
         }
@@ -33,9 +35,9 @@ final class WordTrainerViewModel: ObservableObject {
             let data = try Data(contentsOf: url)
             let list = try JSONDecoder().decode([VocabWord].self, from: data)
             self.words = list.shuffled()
-            print("✅ 読み込み成功。件数:", self.words.count)
+            Log.words.info("Loaded words count=\(self.words.count, privacy: .public)")
         } catch {
-            print("❌ デコード失敗:", error)
+            Log.words.error("Decode failed: \(error.localizedDescription, privacy: .public)")
             fallback()
         }
     }

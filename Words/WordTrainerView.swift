@@ -6,15 +6,16 @@
 //
 
 // Features/Words/WordTrainerView.swift
+
 import SwiftUI
 
 struct WordTrainerView: View {
     @StateObject var vm = WordTrainerViewModel()
+    @State private var lastSpokenWordID: String? = nil   // ← 追加
 
     var body: some View {
         VStack(spacing: 24) {
             if let w = vm.current {
-                // 単語＋スピーカーボタン
                 HStack(alignment: .firstTextBaseline, spacing: 12) {
                     Text(w.term)
                         .font(.system(size: 40, weight: .bold))
@@ -23,8 +24,7 @@ struct WordTrainerView: View {
                     Button {
                         SpeechService.shared.speak(w.term, lang: SpeechService.prefLang)
                     } label: {
-                        Image(systemName: "speaker.wave.2.fill")
-                            .font(.title2)
+                        Image(systemName: "speaker.wave.2.fill").font(.title2)
                     }
                     .accessibilityLabel("発音を再生")
                 }
@@ -50,7 +50,7 @@ struct WordTrainerView: View {
                 }
 
                 Button("次へ") {
-                    SpeechService.shared.stop()   // 読み上げを止めてから次へ
+                    SpeechService.shared.stop()
                     vm.next()
                 }
                 .buttonStyle(.bordered)
@@ -63,6 +63,17 @@ struct WordTrainerView: View {
         }
         .padding()
         .navigationTitle("単語学習")
+        .onAppear {
+            if let w = vm.current, lastSpokenWordID == nil {
+                lastSpokenWordID = w.id
+                SpeechService.shared.speak(w.term, lang: SpeechService.prefLang)
+            }
+        }
+        .onChange(of: vm.current?.id) { newID in
+            guard let id = newID, id != lastSpokenWordID, let w = vm.current else { return }
+            lastSpokenWordID = id
+            SpeechService.shared.speak(w.term, lang: SpeechService.prefLang)
+        }
         .onDisappear { SpeechService.shared.stop() }
     }
 }
