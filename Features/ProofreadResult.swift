@@ -11,4 +11,3 @@ struct ProofreadResult: Codable {
     let corrected: String
     let explanations: [String]
 }
-
