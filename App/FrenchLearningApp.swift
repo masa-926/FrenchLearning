@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct FrenchLearningApp: App {
-var body: some Scene {
-WindowGroup { HomeView() }
-}
+    var body: some Scene {
+        WindowGroup { ContentView() }
+    }
 }

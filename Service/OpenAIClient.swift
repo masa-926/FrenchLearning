@@ -13,12 +13,14 @@ final class OpenAIClient {
         case invalidStatus(Int, String)
         case emptyOutput
         case decodeFailed(String)
+        case insufficientQuota
         var errorDescription: String? {
             switch self {
             case .missingAPIKey: return "APIキーが未設定です（設定画面で保存してください）。"
             case .invalidStatus(let code, let body): return "サーバーエラー (\(code))：\(body)"
             case .emptyOutput: return "AIの出力が空でした。"
             case .decodeFailed(let s): return "JSONの解析に失敗しました：\(s)"
+            case .insufficientQuota: return "クレジット残高が不足しています（insufficient_quota）。"
             }
         }
     }
@@ -28,6 +30,7 @@ final class OpenAIClient {
             .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
+    /// フランス語の文章を校正 → {corrected, explanations[]} のJSONを返す
     func proofread(text: String) async throws -> ProofreadResult {
         guard let key = apiKey, !key.isEmpty else { throw APIError.missingAPIKey }
 
@@ -37,41 +40,56 @@ final class OpenAIClient {
         req.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization")
         req.timeoutInterval = 30
 
+        // Responses API: input_text + text.format で Structured Outputs
         let body: [String: Any] = [
             "model": "gpt-4o-mini",
             "input": [
-                ["role": "system", "content": [
-                    ["type": "text", "text":
-                        "あなたはフランス語の校正アシスタント。出力は必ず {\"corrected\": string, \"explanations\": string[]} のJSONだけ。"]
-                ]],
-                ["role": "user", "content": [
-                    ["type": "text", "text":
-                        """
-                        JSONスキーマ：
-                        { "corrected": string, "explanations": string[] }
+                [
+                    "role": "system",
+                    "content": [[
+                        "type": "input_text",
+                        "text":
+"""
+あなたはフランス語の校正アシスタントです。ユーザーの文章の誤りを直し、
+なぜ直したかを日本語で簡潔に説明します。
+出力は必ず次のJSONスキーマに一致させてください。
+"""
+                    ]]
+                ],
+                [
+                    "role": "user",
+                    "content": [[
+                        "type": "input_text",
+                        "text":
+"""
+JSONスキーマ：
+{ "corrected": string, "explanations": string[] }
 
-                        校正対象テキスト：
-                        \(text)
-                        """
-                    ]
-                ]]
+校正対象テキスト：
+\(text)
+"""
+                    ]]
+                ]
             ],
-            "response_format": [
-                "type": "json_schema",
-                "json_schema": [
-                    "name": "Proofread",
+            "text": [
+                "format": [
+                    "type": "json_schema",
+                    "name": "ProofreadResult",
                     "schema": [
                         "type": "object",
                         "properties": [
                             "corrected": ["type": "string"],
-                            "explanations": ["type": "array", "items": ["type": "string"]]
+                            "explanations": [
+                                "type": "array",
+                                "items": ["type": "string"]
+                            ]
                         ],
                         "required": ["corrected", "explanations"],
                         "additionalProperties": false
                     ]
                 ]
             ],
-            "max_output_tokens": 800
+            "max_output_tokens": 300
         ]
         req.httpBody = try JSONSerialization.data(withJSONObject: body)
 
@@ -79,10 +97,13 @@ final class OpenAIClient {
         guard let http = resp as? HTTPURLResponse else { throw APIError.emptyOutput }
         guard (200...299).contains(http.statusCode) else {
             let bodyStr = String(data: data, encoding: .utf8) ?? ""
+            if http.statusCode == 429 || bodyStr.contains("insufficient_quota") {
+                throw APIError.insufficientQuota
+            }
             throw APIError.invalidStatus(http.statusCode, bodyStr)
         }
 
-        // JSON文字列の取り出し
+        // 出力テキストを取り出し
         let root = try JSONSerialization.jsonObject(with: data) as? [String: Any]
         var textJSON: String?
         if let t = root?["output_text"] as? String {
@@ -93,10 +114,11 @@ final class OpenAIClient {
             let content = first["content"] as? [[String: Any]] {
             textJSON = content.compactMap { $0["text"] as? String }.joined()
         }
-        guard var payload = textJSON?.trimmingCharacters(in: .whitespacesAndNewlines), !payload.isEmpty
-        else { throw APIError.emptyOutput }
 
-        // ```json フェンス除去
+        guard var payload = textJSON?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !payload.isEmpty else { throw APIError.emptyOutput }
+
+        // ```json ... ``` フェンス除去（念のため）
         if let s = payload.range(of: "```"),
            let e = payload.range(of: "```", range: s.upperBound..<payload.endIndex) {
             payload = String(payload[s.upperBound..<e.lowerBound])

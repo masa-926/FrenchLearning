@@ -21,6 +21,7 @@
 		EB9BF0662E5AE4CC0049F1C3 /* ProofreadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0652E5AE4CC0049F1C3 /* ProofreadViewModel.swift */; };
 		EB9BF0682E5AE4E90049F1C3 /* ProofreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0672E5AE4E90049F1C3 /* ProofreadView.swift */; };
 		EB9BF06A2E5AE7E20049F1C3 /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0692E5AE7E20049F1C3 /* OpenAIClient.swift */; };
+		EB9BF06C2E5AFA170049F1C3 /* DiffHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF06B2E5AFA170049F1C3 /* DiffHighlighter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		EB9BF0652E5AE4CC0049F1C3 /* ProofreadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProofreadViewModel.swift; sourceTree = "<group>"; };
 		EB9BF0672E5AE4E90049F1C3 /* ProofreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProofreadView.swift; sourceTree = "<group>"; };
 		EB9BF0692E5AE7E20049F1C3 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
+		EB9BF06B2E5AFA170049F1C3 /* DiffHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffHighlighter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -161,6 +163,7 @@
 			children = (
 				EB9BF0552E5A23110049F1C3 /* ProgressStore.swift */,
 				EB9BF0692E5AE7E20049F1C3 /* OpenAIClient.swift */,
+				EB9BF06B2E5AFA170049F1C3 /* DiffHighlighter.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				EB9BF0682E5AE4E90049F1C3 /* ProofreadView.swift in Sources */,
 				EB9BF0502E5A22C70049F1C3 /* HomeView.swift in Sources */,
 				EB9BF06A2E5AE7E20049F1C3 /* OpenAIClient.swift in Sources */,
+				EB9BF06C2E5AFA170049F1C3 /* DiffHighlighter.swift in Sources */,
 				EB9BF0482E5A213E0049F1C3 /* ContentView.swift in Sources */,
 				EB9BF0522E5A22EA0049F1C3 /* WordTrainerView.swift in Sources */,
 				EB9BF0622E5AE45D0049F1C3 /* SettingsView.swift in Sources */,

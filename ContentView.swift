@@ -24,15 +24,8 @@ struct ContentView: View {
             }
             .padding()
             .toolbar {
-                // 右上フィードバック（任意）
-                ToolbarItem(placement: .topBarTrailing) {
-                    Link(destination: URL(string:"https://example.com/feedback")!) {
-                        Image(systemName: "bubble.left.and.bubble.right")
-                    }
-                }
-                // 下部の歯車 → 設定画面へ
                 ToolbarItem(placement: .bottomBar) {
-                    NavigationLink { SettingsView() } label: {
+                    NavigationLink { SettingsView() } label: {  // ← ここがポイント
                         Image(systemName: "gearshape")
                     }
                 }

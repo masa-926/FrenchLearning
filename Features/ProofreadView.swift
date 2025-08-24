@@ -30,18 +30,25 @@ struct ProofreadView: View {
             .disabled(vm.isLoading)
 
             if let r = vm.result {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("修正文").font(.headline)
-                    Text(r.corrected)
-                    Divider()
+                // 差分ハイライトを生成
+                let (origHL, corrHL) = DiffHighlighter.highlight(original: vm.input, corrected: r.corrected)
+
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("元の文").font(.headline)
+                    Text(origHL)
+
+                    Text("修正文").font(.headline).padding(.top, 6)
+                    Text(corrHL)
+
+                    Divider().padding(.vertical, 6)
                     Text("ポイント").font(.headline)
                     ForEach(r.explanations, id: \.self) { exp in
-                        Text("• \(exp)")
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("• \(exp)").frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
+
 
             if let err = vm.error {
                 Text(err).foregroundColor(.red) // foregroundStyle(.red) でもOK
