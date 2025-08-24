@@ -16,6 +16,10 @@
 		EB9BF0562E5A23110049F1C3 /* Services: ProgressStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0552E5A23110049F1C3 /* Services: ProgressStore.swift */; };
 		EB9BF0582E5A23430049F1C3 /* Resources: wordset_fr_ja.json in Resources */ = {isa = PBXBuildFile; fileRef = EB9BF0572E5A23430049F1C3 /* Resources: wordset_fr_ja.json */; };
 		EB9BF05B2E5A23990049F1C3 /* App: FrenchLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF05A2E5A23990049F1C3 /* App: FrenchLearningApp.swift */; };
+		EB9BF0622E5AE45D0049F1C3 /* Features:Settings:SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0612E5AE45D0049F1C3 /* Features:Settings:SettingsView.swift */; };
+		EB9BF0642E5AE49D0049F1C3 /* Features:Proofread:ProofreadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0632E5AE49D0049F1C3 /* Features:Proofread:ProofreadResult.swift */; };
+		EB9BF0662E5AE4CC0049F1C3 /* Features:Proofread:ProofreadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0652E5AE4CC0049F1C3 /* Features:Proofread:ProofreadViewModel.swift */; };
+		EB9BF0682E5AE4E90049F1C3 /* Features:Proofread:ProofreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0672E5AE4E90049F1C3 /* Features:Proofread:ProofreadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		EB9BF0552E5A23110049F1C3 /* Services: ProgressStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services: ProgressStore.swift"; sourceTree = "<group>"; };
 		EB9BF0572E5A23430049F1C3 /* Resources: wordset_fr_ja.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Resources: wordset_fr_ja.json"; sourceTree = "<group>"; };
 		EB9BF05A2E5A23990049F1C3 /* App: FrenchLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App: FrenchLearningApp.swift"; sourceTree = "<group>"; };
+		EB9BF0612E5AE45D0049F1C3 /* Features:Settings:SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Features:Settings:SettingsView.swift"; sourceTree = "<group>"; };
+		EB9BF0632E5AE49D0049F1C3 /* Features:Proofread:ProofreadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Features:Proofread:ProofreadResult.swift"; sourceTree = "<group>"; };
+		EB9BF0652E5AE4CC0049F1C3 /* Features:Proofread:ProofreadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Features:Proofread:ProofreadViewModel.swift"; sourceTree = "<group>"; };
+		EB9BF0672E5AE4E90049F1C3 /* Features:Proofread:ProofreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Features:Proofread:ProofreadView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -128,6 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				EB9BF04F2E5A22C70049F1C3 /* Features: Home: HomeView.swift */,
+				EB9BF0612E5AE45D0049F1C3 /* Features:Settings:SettingsView.swift */,
+				EB9BF0632E5AE49D0049F1C3 /* Features:Proofread:ProofreadResult.swift */,
+				EB9BF0652E5AE4CC0049F1C3 /* Features:Proofread:ProofreadViewModel.swift */,
+				EB9BF0672E5AE4E90049F1C3 /* Features:Proofread:ProofreadView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -303,12 +315,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9BF0542E5A23020049F1C3 /* WordTrainerViewModel.swift in Sources */,
+				EB9BF0642E5AE49D0049F1C3 /* Features:Proofread:ProofreadResult.swift in Sources */,
 				EB9BF05B2E5A23990049F1C3 /* App: FrenchLearningApp.swift in Sources */,
 				EB9BF0562E5A23110049F1C3 /* Services: ProgressStore.swift in Sources */,
 				EB9BF04C2E5A22660049F1C3 /* Words: VocabWord.swift in Sources */,
+				EB9BF0662E5AE4CC0049F1C3 /* Features:Proofread:ProofreadViewModel.swift in Sources */,
+				EB9BF0682E5AE4E90049F1C3 /* Features:Proofread:ProofreadView.swift in Sources */,
 				EB9BF0502E5A22C70049F1C3 /* Features: Home: HomeView.swift in Sources */,
 				EB9BF0482E5A213E0049F1C3 /* ContentView.swift in Sources */,
 				EB9BF0522E5A22EA0049F1C3 /* WordTrainerView.swift in Sources */,
+				EB9BF0622E5AE45D0049F1C3 /* Features:Settings:SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
