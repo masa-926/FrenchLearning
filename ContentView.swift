@@ -14,18 +14,16 @@ struct ContentView: View {
                 NavigationLink("単語学習") { WordTrainerView() }
                     .buttonStyle(.borderedProminent)
 
-                NavigationLink("クイズ（後で）") { Text("次フェーズ") }
-                    .buttonStyle(.bordered)
+                NavigationLink("クイズ（4択）") { QuizView() }   // ← ここ
 
                 NavigationLink("文章添削") { ProofreadView() }
-                    .buttonStyle(.bordered)
 
                 Spacer()
             }
             .padding()
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    NavigationLink { SettingsView() } label: {  // ← ここがポイント
+                    NavigationLink { SettingsView() } label: {
                         Image(systemName: "gearshape")
                     }
                 }
@@ -36,3 +34,4 @@ struct ContentView: View {
 }
 
 #Preview { ContentView() }
+

@@ -1,16 +1,8 @@
-//
-//  WordTrainerView.swift
-//  FrenchLearning
-//
-//  Created by 藤原匡都 on 2025/08/24.
-//
-
-// Features/Words/WordTrainerView.swift
-
 import SwiftUI
 
 struct WordTrainerView: View {
     @StateObject var vm = WordTrainerViewModel()
+    @AppStorage("srs.enabled") private var srsEnabled: Bool = true
 
     // 自動発音の設定＋多重再生防止
     @AppStorage("tts.autoplay") private var ttsAutoplay: Bool = true
@@ -47,6 +39,27 @@ struct WordTrainerView: View {
                             .buttonStyle(.bordered)
                             .padding(.top, 4)
                         }
+
+                        // SRS 操作用
+                        if srsEnabled {
+                            HStack {
+                                Button {
+                                    Task { await MainActor.run { vm.review(correct: false) } }
+                                } label: {
+                                    Label("まだ", systemImage: "arrow.counterclockwise")
+                                }
+                                .buttonStyle(.bordered)
+                                .tint(.orange)
+
+                                Button {
+                                    Task { await MainActor.run { vm.review(correct: true) } }
+                                } label: {
+                                    Label("覚えた", systemImage: "checkmark.circle")
+                                }
+                                .buttonStyle(.borderedProminent)
+                            }
+                            .padding(.top, 6)
+                        }
                     }
                     .transition(.opacity)
                 } else {
@@ -54,9 +67,13 @@ struct WordTrainerView: View {
                         .buttonStyle(.borderedProminent)
                 }
 
-                Button("次へ") {
-                    SpeechService.shared.stop()
-                    vm.next()
+                // 「次へ」：SRS有効なら次の復習、無効なら従来のnext()
+                Button(srsEnabled ? "次の復習へ" : "次へ") {
+                    if srsEnabled {
+                        Task { await MainActor.run { vm.nextDue() } }
+                    } else {
+                        vm.next()
+                    }
                 }
                 .buttonStyle(.bordered)
                 .padding(.top, 8)
@@ -69,13 +86,15 @@ struct WordTrainerView: View {
         .padding()
         .navigationTitle("単語学習")
 
-        // 画面表示時：現在の単語を1回だけ自動発音
+        // 初回表示：SRS整合＋自動発音1回
         .onAppear {
-            guard ttsAutoplay, let w = vm.current, lastSpokenWordID == nil else { return }
-            lastSpokenWordID = w.id
-            SpeechService.shared.stop()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                SpeechService.shared.speak(w.term, lang: SpeechService.prefLang)
+            vm.alignToSRSIfNeeded()
+            if ttsAutoplay, let w = vm.current, lastSpokenWordID == nil {
+                lastSpokenWordID = w.id
+                SpeechService.shared.stop()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                    SpeechService.shared.speak(w.term, lang: SpeechService.prefLang)
+                }
             }
         }
 
@@ -92,3 +111,4 @@ struct WordTrainerView: View {
         .onDisappear { SpeechService.shared.stop() }
     }
 }
+

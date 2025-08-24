@@ -14,7 +14,7 @@
 		EB9BF0522E5A22EA0049F1C3 /* WordTrainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0512E5A22EA0049F1C3 /* WordTrainerView.swift */; };
 		EB9BF0542E5A23020049F1C3 /* WordTrainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0532E5A23020049F1C3 /* WordTrainerViewModel.swift */; };
 		EB9BF0562E5A23110049F1C3 /* ProgressStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0552E5A23110049F1C3 /* ProgressStore.swift */; };
-		EB9BF0582E5A23430049F1C3 /* Resources: wordset_fr_ja.json in Resources */ = {isa = PBXBuildFile; fileRef = EB9BF0572E5A23430049F1C3 /* Resources: wordset_fr_ja.json */; };
+		EB9BF0582E5A23430049F1C3 /* wordset_fr_ja.json in Resources */ = {isa = PBXBuildFile; fileRef = EB9BF0572E5A23430049F1C3 /* wordset_fr_ja.json */; };
 		EB9BF05B2E5A23990049F1C3 /* FrenchLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF05A2E5A23990049F1C3 /* FrenchLearningApp.swift */; };
 		EB9BF0622E5AE45D0049F1C3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0612E5AE45D0049F1C3 /* SettingsView.swift */; };
 		EB9BF0642E5AE49D0049F1C3 /* ProofreadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0632E5AE49D0049F1C3 /* ProofreadResult.swift */; };
@@ -27,6 +27,11 @@
 		EB9BF0742E5AFFD10049F1C3 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0732E5AFFD10049F1C3 /* SpeechService.swift */; };
 		EB9BF0762E5B02A70049F1C3 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0752E5B02A70049F1C3 /* Log.swift */; };
 		EB9BF0782E5B05C10049F1C3 /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0772E5B05C10049F1C3 /* OpenAIClient.swift */; };
+		EB9BF07A2E5B3C220049F1C3 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0792E5B3C220049F1C3 /* Haptics.swift */; };
+		EB9BF07C2E5B3C4E0049F1C3 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF07B2E5B3C4E0049F1C3 /* QuizQuestion.swift */; };
+		EB9BF07E2E5B3C760049F1C3 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF07D2E5B3C760049F1C3 /* QuizViewModel.swift */; };
+		EB9BF0802E5B3CA50049F1C3 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF07F2E5B3CA50049F1C3 /* QuizView.swift */; };
+		EB9BF0822E5B428C0049F1C3 /* SRSStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0812E5B428C0049F1C3 /* SRSStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +63,7 @@
 		EB9BF0512E5A22EA0049F1C3 /* WordTrainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTrainerView.swift; sourceTree = "<group>"; };
 		EB9BF0532E5A23020049F1C3 /* WordTrainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTrainerViewModel.swift; sourceTree = "<group>"; };
 		EB9BF0552E5A23110049F1C3 /* ProgressStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStore.swift; sourceTree = "<group>"; };
-		EB9BF0572E5A23430049F1C3 /* Resources: wordset_fr_ja.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Resources: wordset_fr_ja.json"; sourceTree = "<group>"; };
+		EB9BF0572E5A23430049F1C3 /* wordset_fr_ja.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wordset_fr_ja.json; sourceTree = "<group>"; };
 		EB9BF05A2E5A23990049F1C3 /* FrenchLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchLearningApp.swift; sourceTree = "<group>"; };
 		EB9BF0612E5AE45D0049F1C3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EB9BF0632E5AE49D0049F1C3 /* ProofreadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProofreadResult.swift; sourceTree = "<group>"; };
@@ -71,6 +76,11 @@
 		EB9BF0732E5AFFD10049F1C3 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
 		EB9BF0752E5B02A70049F1C3 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		EB9BF0772E5B05C10049F1C3 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
+		EB9BF0792E5B3C220049F1C3 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		EB9BF07B2E5B3C4E0049F1C3 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		EB9BF07D2E5B3C760049F1C3 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		EB9BF07F2E5B3CA50049F1C3 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		EB9BF0812E5B428C0049F1C3 /* SRSStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRSStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -155,6 +165,10 @@
 				EB9BF0652E5AE4CC0049F1C3 /* ProofreadViewModel.swift */,
 				EB9BF0672E5AE4E90049F1C3 /* ProofreadView.swift */,
 				EB9BF0712E5AFDED0049F1C3 /* Common:OfflineBanner.swift */,
+				EB9BF07B2E5B3C4E0049F1C3 /* QuizQuestion.swift */,
+				EB9BF07D2E5B3C760049F1C3 /* QuizViewModel.swift */,
+				EB9BF07F2E5B3CA50049F1C3 /* QuizView.swift */,
+				EB9BF0812E5B428C0049F1C3 /* SRSStore.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -179,6 +193,7 @@
 				EB9BF0732E5AFFD10049F1C3 /* SpeechService.swift */,
 				EB9BF0752E5B02A70049F1C3 /* Log.swift */,
 				EB9BF0772E5B05C10049F1C3 /* OpenAIClient.swift */,
+				EB9BF0792E5B3C220049F1C3 /* Haptics.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -186,7 +201,7 @@
 		EB9BF05F2E5A24050049F1C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EB9BF0572E5A23430049F1C3 /* Resources: wordset_fr_ja.json */,
+				EB9BF0572E5A23430049F1C3 /* wordset_fr_ja.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -310,7 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB64724D2E5A1138000D19F7 /* Assets.xcassets in Resources */,
-				EB9BF0582E5A23430049F1C3 /* Resources: wordset_fr_ja.json in Resources */,
+				EB9BF0582E5A23430049F1C3 /* wordset_fr_ja.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,13 +359,18 @@
 				EB9BF0562E5A23110049F1C3 /* ProgressStore.swift in Sources */,
 				EB9BF04C2E5A22660049F1C3 /* VocabWord.swift in Sources */,
 				EB9BF0662E5AE4CC0049F1C3 /* ProofreadViewModel.swift in Sources */,
+				EB9BF07E2E5B3C760049F1C3 /* QuizViewModel.swift in Sources */,
 				EB9BF0682E5AE4E90049F1C3 /* ProofreadView.swift in Sources */,
 				EB9BF0702E5AFDC50049F1C3 /* NetworkMonitor.swift in Sources */,
 				EB9BF06E2E5AFB5C0049F1C3 /* DailyQuotaStore.swift in Sources */,
+				EB9BF0802E5B3CA50049F1C3 /* QuizView.swift in Sources */,
 				EB9BF0502E5A22C70049F1C3 /* HomeView.swift in Sources */,
 				EB9BF06C2E5AFA170049F1C3 /* DiffHighlighter.swift in Sources */,
+				EB9BF07C2E5B3C4E0049F1C3 /* QuizQuestion.swift in Sources */,
 				EB9BF0482E5A213E0049F1C3 /* ContentView.swift in Sources */,
 				EB9BF0742E5AFFD10049F1C3 /* SpeechService.swift in Sources */,
+				EB9BF0822E5B428C0049F1C3 /* SRSStore.swift in Sources */,
+				EB9BF07A2E5B3C220049F1C3 /* Haptics.swift in Sources */,
 				EB9BF0522E5A22EA0049F1C3 /* WordTrainerView.swift in Sources */,
 				EB9BF0622E5AE45D0049F1C3 /* SettingsView.swift in Sources */,
 			);

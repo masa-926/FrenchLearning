@@ -11,6 +11,8 @@ struct SettingsView: View {
     @AppStorage("openai.apiKey") private var apiKey: String = ""
     @AppStorage("openai.mockEnabled") private var mockEnabled: Bool = false
     @AppStorage("openai.dailyLimit") private var dailyLimit: Int = 20
+    @AppStorage("srs.enabled") private var srsEnabled: Bool = true
+    @AppStorage("srs.fast") private var srsFast: Bool = true   // テストしやすい高速SRS
 
     // 音声設定
     @AppStorage("tts.enabled") private var ttsEnabled: Bool = true
@@ -38,6 +40,14 @@ struct SettingsView: View {
                     DailyQuotaStore.shared.resetToday()
                 }
             }
+            Section("学習（SRS）") {
+                Toggle("SRS（間隔反復）を有効にする", isOn: $srsEnabled)
+                Toggle("SRSテスト用に高速化（分単位）", isOn: $srsFast)
+                Text("SRSをONにすると「覚えた/まだ」で次回の復習タイミングが自動調整されます。")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
 
             Section("音声（単語カード）") {
                 Toggle("読み上げを有効にする", isOn: $ttsEnabled)
