@@ -23,6 +23,8 @@
 		EB9BF06A2E5AE7E20049F1C3 /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0692E5AE7E20049F1C3 /* OpenAIClient.swift */; };
 		EB9BF06C2E5AFA170049F1C3 /* DiffHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF06B2E5AFA170049F1C3 /* DiffHighlighter.swift */; };
 		EB9BF06E2E5AFB5C0049F1C3 /* DailyQuotaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF06D2E5AFB5C0049F1C3 /* DailyQuotaStore.swift */; };
+		EB9BF0702E5AFDC50049F1C3 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF06F2E5AFDC50049F1C3 /* NetworkMonitor.swift */; };
+		EB9BF0722E5AFDEE0049F1C3 /* Common:OfflineBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BF0712E5AFDED0049F1C3 /* Common:OfflineBanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		EB9BF0692E5AE7E20049F1C3 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
 		EB9BF06B2E5AFA170049F1C3 /* DiffHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffHighlighter.swift; sourceTree = "<group>"; };
 		EB9BF06D2E5AFB5C0049F1C3 /* DailyQuotaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotaStore.swift; sourceTree = "<group>"; };
+		EB9BF06F2E5AFDC50049F1C3 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		EB9BF0712E5AFDED0049F1C3 /* Common:OfflineBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common:OfflineBanner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -146,6 +150,7 @@
 				EB9BF0632E5AE49D0049F1C3 /* ProofreadResult.swift */,
 				EB9BF0652E5AE4CC0049F1C3 /* ProofreadViewModel.swift */,
 				EB9BF0672E5AE4E90049F1C3 /* ProofreadView.swift */,
+				EB9BF0712E5AFDED0049F1C3 /* Common:OfflineBanner.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				EB9BF0692E5AE7E20049F1C3 /* OpenAIClient.swift */,
 				EB9BF06B2E5AFA170049F1C3 /* DiffHighlighter.swift */,
 				EB9BF06D2E5AFB5C0049F1C3 /* DailyQuotaStore.swift */,
+				EB9BF06F2E5AFDC50049F1C3 /* NetworkMonitor.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -324,12 +330,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9BF0542E5A23020049F1C3 /* WordTrainerViewModel.swift in Sources */,
+				EB9BF0722E5AFDEE0049F1C3 /* Common:OfflineBanner.swift in Sources */,
 				EB9BF0642E5AE49D0049F1C3 /* ProofreadResult.swift in Sources */,
 				EB9BF05B2E5A23990049F1C3 /* FrenchLearningApp.swift in Sources */,
 				EB9BF0562E5A23110049F1C3 /* ProgressStore.swift in Sources */,
 				EB9BF04C2E5A22660049F1C3 /* VocabWord.swift in Sources */,
 				EB9BF0662E5AE4CC0049F1C3 /* ProofreadViewModel.swift in Sources */,
 				EB9BF0682E5AE4E90049F1C3 /* ProofreadView.swift in Sources */,
+				EB9BF0702E5AFDC50049F1C3 /* NetworkMonitor.swift in Sources */,
 				EB9BF06E2E5AFB5C0049F1C3 /* DailyQuotaStore.swift in Sources */,
 				EB9BF0502E5A22C70049F1C3 /* HomeView.swift in Sources */,
 				EB9BF06A2E5AE7E20049F1C3 /* OpenAIClient.swift in Sources */,
