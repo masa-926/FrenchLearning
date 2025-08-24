@@ -14,6 +14,7 @@ struct SettingsView: View {
 
     // 音声設定
     @AppStorage("tts.enabled") private var ttsEnabled: Bool = true
+    @AppStorage("tts.autoplay") private var ttsAutoplay: Bool = true
     @AppStorage("tts.lang") private var ttsLang: String = "fr-FR"
     @AppStorage("tts.rate") private var ttsRate: Double = 0.45
 
@@ -40,6 +41,8 @@ struct SettingsView: View {
 
             Section("音声（単語カード）") {
                 Toggle("読み上げを有効にする", isOn: $ttsEnabled)
+                Toggle("単語を表示したら自動で発音", isOn: $ttsAutoplay)
+
                 Picker("言語", selection: $ttsLang) {
                     Text("フランス語（フランス）").tag("fr-FR")
                     Text("フランス語（カナダ）").tag("fr-CA")

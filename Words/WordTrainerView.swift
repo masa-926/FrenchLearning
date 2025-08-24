@@ -11,11 +11,15 @@ import SwiftUI
 
 struct WordTrainerView: View {
     @StateObject var vm = WordTrainerViewModel()
-    @State private var lastSpokenWordID: String? = nil   // ← 追加
+
+    // 自動発音の設定＋多重再生防止
+    @AppStorage("tts.autoplay") private var ttsAutoplay: Bool = true
+    @State private var lastSpokenWordID: String? = nil
 
     var body: some View {
         VStack(spacing: 24) {
             if let w = vm.current {
+                // 単語＋スピーカー
                 HStack(alignment: .firstTextBaseline, spacing: 12) {
                     Text(w.term)
                         .font(.system(size: 40, weight: .bold))
@@ -29,6 +33,7 @@ struct WordTrainerView: View {
                     .accessibilityLabel("発音を再生")
                 }
 
+                // 意味・例文
                 if vm.showMeaning {
                     VStack(spacing: 8) {
                         Text(w.meaningJa).font(.title2)
@@ -63,17 +68,27 @@ struct WordTrainerView: View {
         }
         .padding()
         .navigationTitle("単語学習")
+
+        // 画面表示時：現在の単語を1回だけ自動発音
         .onAppear {
-            if let w = vm.current, lastSpokenWordID == nil {
-                lastSpokenWordID = w.id
+            guard ttsAutoplay, let w = vm.current, lastSpokenWordID == nil else { return }
+            lastSpokenWordID = w.id
+            SpeechService.shared.stop()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                 SpeechService.shared.speak(w.term, lang: SpeechService.prefLang)
             }
         }
-        .onChange(of: vm.current?.id) { newID in
-            guard let id = newID, id != lastSpokenWordID, let w = vm.current else { return }
+
+        // iOS 17 の新API版 onChange（旧版は非推奨）
+        .onChange(of: vm.current?.id, initial: false) { _, newID in
+            guard ttsAutoplay, let id = newID, id != lastSpokenWordID, let w = vm.current else { return }
             lastSpokenWordID = id
-            SpeechService.shared.speak(w.term, lang: SpeechService.prefLang)
+            SpeechService.shared.stop()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                SpeechService.shared.speak(w.term, lang: SpeechService.prefLang)
+            }
         }
+
         .onDisappear { SpeechService.shared.stop() }
     }
 }
