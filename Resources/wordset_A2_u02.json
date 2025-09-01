@@ -1,0 +1,13 @@
+
+{
+  "id": "a2v001",
+  "term": "visiter",
+  "meaningJa": "訪れる",
+  "pos": "v.",
+  "cefr": "A2",
+  "examples": [
+    { "text": "Je visite le musée avec mes amis.", "ja": "友人と博物館を訪れる。", "tense": "présent" },
+    { "text": "J'ai visité un musée hier.", "ja": "昨日、博物館を訪れた。", "tense": "passé composé" }
+  ],
+  "topics": ["daily","action"]
+}
