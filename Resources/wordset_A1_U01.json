@@ -1,0 +1,69 @@
+[
+  {
+    "id": "a1_0001",
+    "term": "bonjour",
+    "meaningJa": "こんにちは",
+    "pos": "interj.",
+    "cefr": "A1",
+    "freqRank": 500,
+    "examples": [
+      { "text": "Bonjour, ça va ?", "ja": "こんにちは、元気？" },
+      { "text": "Bonjour à tous.", "ja": "皆さん、こんにちは。" }
+    ],
+    "topics": ["greeting"]
+  },
+  {
+    "id": "a1_0002",
+    "term": "merci",
+    "meaningJa": "ありがとう",
+    "pos": "interj.",
+    "cefr": "A1",
+    "freqRank": 600,
+    "examples": [
+      { "text": "Merci beaucoup !", "ja": "本当にありがとう！" },
+      { "text": "Merci pour votre aide.", "ja": "ご協力ありがとうございます。" }
+    ],
+    "topics": ["greeting"]
+  },
+  {
+    "id": "a1_0003",
+    "term": "pomme",
+    "meaningJa": "りんご",
+    "pos": "n.",
+    "gender": "f",
+    "cefr": "A1",
+    "freqRank": 2200,
+    "examples": [
+      { "text": "Je mange une pomme.", "ja": "私はりんごを食べます。" },
+      { "text": "Cette pomme est rouge.", "ja": "このりんごは赤い。" }
+    ],
+    "topics": ["food"]
+  },
+  {
+    "id": "a1_0004",
+    "term": "aller",
+    "meaningJa": "行く",
+    "pos": "v.",
+    "cefr": "A1",
+    "freqRank": 120,
+    "examples": [
+      { "text": "Je vais à l'école.", "ja": "私は学校へ行きます。" },
+      { "text": "Nous allons au cinéma.", "ja": "私たちは映画館に行きます。" }
+    ],
+    "topics": ["movement"]
+  },
+  {
+    "id": "a1_0005",
+    "term": "se souvenir",
+    "meaningJa": "覚えている、思い出す",
+    "pos": "v.",
+    "cefr": "B1",
+    "freqRank": 1800,
+    "examples": [
+      { "text": "Je me souviens de notre voyage.", "ja": "私は私たちの旅行を覚えています。" },
+      { "text": "Tu te souviens de lui ?", "ja": "彼のこと覚えてる？" }
+    ],
+    "topics": ["memory"]
+  }
+]
+

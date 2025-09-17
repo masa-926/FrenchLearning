@@ -1,0 +1,803 @@
+[
+  {
+    "id": "B1_001",
+    "term": "améliorer",
+    "meaningJa": "改善する／向上させる",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "améliorer", "present3sg": "améliore", "pastParticiple": "amélioré" },
+    "topics": ["études", "travail", "progression"],
+    "examples": [
+      { "text": "J'améliore mon français chaque jour.", "ja": "私は毎日フランス語を上達させています。", "tense": "présent" },
+      { "text": "J'ai amélioré mes résultats ce semestre.", "ja": "今学期、成績を上げました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "amélioration", "meaningJa": "改善", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_002",
+    "term": "conseiller",
+    "meaningJa": "助言する／勧める",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "conseiller", "present3sg": "conseille", "pastParticiple": "conseillé" },
+    "topics": ["communication", "travail"],
+    "examples": [
+      { "text": "Il me conseille de partir plus tôt.", "ja": "彼は私にもっと早く出発するよう勧めます。", "tense": "présent" },
+      { "text": "Il m'a conseillé un bon restaurant.", "ja": "彼は私に良いレストランを勧めました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "conseil", "meaningJa": "助言", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_003",
+    "term": "convaincre",
+    "meaningJa": "納得させる／説得する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "convaincre", "present3sg": "convainc", "pastParticiple": "convaincu" },
+    "topics": ["communication", "travail"],
+    "examples": [
+      { "text": "Je convaincs mon équipe avec des faits.", "ja": "私は事実をもってチームを納得させます。", "tense": "présent" },
+      { "text": "Nous avons convaincu le client.", "ja": "私たちは顧客を納得させました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "persuader", "meaningJa": "説得する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "synonym" },
+      { "term": "conviction", "meaningJa": "確信／信念", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_004",
+    "term": "éviter",
+    "meaningJa": "避ける／回避する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "éviter", "present3sg": "évite", "pastParticiple": "évité" },
+    "topics": ["santé", "sécurité"],
+    "examples": [
+      { "text": "J'évite le sucre le soir.", "ja": "私は夜は砂糖を避けます。", "tense": "présent" },
+      { "text": "Nous avons évité un accident.", "ja": "私たちは事故を避けました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "prévenir", "meaningJa": "未然に防ぐ／知らせる", "pos": { "code": "verb", "ja": "動詞" }, "relation": "synonym" }
+    ]
+  },
+  {
+    "id": "B1_005",
+    "term": "profiter",
+    "meaningJa": "（〜を）活かす／享受する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "profiter", "present3sg": "profite", "pastParticiple": "profité" },
+    "topics": ["loisir", "opportunité"],
+    "examples": [
+      { "text": "Nous profitons du soleil.", "ja": "私たちは太陽を満喫しています。", "tense": "présent" },
+      { "text": "J'ai profité de l'occasion pour apprendre.", "ja": "私はその機会を活かして学びました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "bénéficier (de)", "meaningJa": "恩恵を受ける", "pos": { "code": "verb", "ja": "動詞" }, "relation": "synonym" }
+    ]
+  },
+  {
+    "id": "B1_006",
+    "term": "réussir",
+    "meaningJa": "成功する／うまくやる",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "réussir", "present3sg": "réussit", "pastParticiple": "réussi" },
+    "topics": ["études", "travail"],
+    "examples": [
+      { "text": "Elle réussit souvent ses examens.", "ja": "彼女はよく試験に合格します。", "tense": "présent" },
+      { "text": "Elle a réussi son entretien hier.", "ja": "彼女は昨日の面接に受かりました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "échec", "meaningJa": "失敗", "pos": { "code": "noun", "ja": "名詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_007",
+    "term": "échouer",
+    "meaningJa": "失敗する／落ちる",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "échouer", "present3sg": "échoue", "pastParticiple": "échoué" },
+    "topics": ["études", "travail"],
+    "examples": [
+      { "text": "Il échoue parfois aux tests.", "ja": "彼は時々テストに落ちます。", "tense": "présent" },
+      { "text": "Il a échoué à l'examen final.", "ja": "彼は期末試験に落ちました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "réussir", "meaningJa": "成功する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_008",
+    "term": "proposer",
+    "meaningJa": "提案する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "proposer", "present3sg": "propose", "pastParticiple": "proposé" },
+    "topics": ["travail", "projet"],
+    "examples": [
+      { "text": "Je propose une solution simple.", "ja": "私は簡単な解決策を提案します。", "tense": "présent" },
+      { "text": "Nous avons proposé de changer la date.", "ja": "私たちは日程変更を提案しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "proposition", "meaningJa": "提案", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_009",
+    "term": "accepter",
+    "meaningJa": "受け入れる／承諾する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "accepter", "present3sg": "accepte", "pastParticiple": "accepté" },
+    "topics": ["travail", "vie quotidienne"],
+    "examples": [
+      { "text": "Ils acceptent l'offre.", "ja": "彼らはその申し出を受け入れます。", "tense": "présent" },
+      { "text": "Ils ont accepté la proposition.", "ja": "彼らは提案を受け入れました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "refuser", "meaningJa": "断る", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_010",
+    "term": "refuser",
+    "meaningJa": "断る／拒否する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "refuser", "present3sg": "refuse", "pastParticiple": "refusé" },
+    "topics": ["travail", "vie quotidienne"],
+    "examples": [
+      { "text": "Je refuse de signer sans lire.", "ja": "読まずに署名するのはお断りします。", "tense": "présent" },
+      { "text": "J'ai refusé l'invitation.", "ja": "私は招待を断りました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "accepter", "meaningJa": "受け入れる", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_011",
+    "term": "comparer",
+    "meaningJa": "比較する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "comparer", "present3sg": "compare", "pastParticiple": "comparé" },
+    "topics": ["achat", "consommation"],
+    "examples": [
+      { "text": "Je compare les prix avant d'acheter.", "ja": "私は買う前に価格を比較します。", "tense": "présent" },
+      { "text": "J'ai comparé plusieurs modèles.", "ja": "私はいくつかの機種を比較しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "comparaison", "meaningJa": "比較", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_012",
+    "term": "économiser",
+    "meaningJa": "節約する／貯める",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "économiser", "present3sg": "économise", "pastParticiple": "économisé" },
+    "topics": ["argent"],
+    "examples": [
+      { "text": "Nous économisons pour le voyage.", "ja": "私たちは旅行のために貯金しています。", "tense": "présent" },
+      { "text": "J'ai économisé beaucoup cette année.", "ja": "私は今年たくさん節約しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "épargne", "meaningJa": "貯蓄", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" },
+      { "term": "dépenser", "meaningJa": "使う／支出する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_013",
+    "term": "emprunter",
+    "meaningJa": "借りる（お金・物）",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "emprunter", "present3sg": "emprunte", "pastParticiple": "emprunté" },
+    "topics": ["banque", "vie quotidienne"],
+    "examples": [
+      { "text": "J'emprunte ce livre à la bibliothèque.", "ja": "私はこの本を図書館で借ります。", "tense": "présent" },
+      { "text": "J'ai emprunté de l'argent à un ami.", "ja": "私は友人にお金を借りました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "prêter", "meaningJa": "貸す", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_014",
+    "term": "prêter",
+    "meaningJa": "貸す",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "prêter", "present3sg": "prête", "pastParticiple": "prêté" },
+    "topics": ["banque", "vie quotidienne"],
+    "examples": [
+      { "text": "Il me prête sa voiture.", "ja": "彼は私に車を貸します。", "tense": "présent" },
+      { "text": "Il m'a prêté vingt euros.", "ja": "彼は私に20ユーロ貸してくれました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "emprunter", "meaningJa": "借りる", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_015",
+    "term": "réserver",
+    "meaningJa": "予約する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "réserver", "present3sg": "réserve", "pastParticiple": "réservé" },
+    "topics": ["voyage", "restaurant"],
+    "examples": [
+      { "text": "Je réserve une table pour deux.", "ja": "2名でテーブルを予約します。", "tense": "présent" },
+      { "text": "J'ai réservé un hôtel en ligne.", "ja": "私はホテルをオンラインで予約しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "annuler", "meaningJa": "取り消す／キャンセルする", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_016",
+    "term": "annuler",
+    "meaningJa": "取り消す／キャンセルする",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "annuler", "present3sg": "annule", "pastParticiple": "annulé" },
+    "topics": ["voyage", "administration"],
+    "examples": [
+      { "text": "J'annule la réunion de demain.", "ja": "私は明日の会議をキャンセルします。", "tense": "présent" },
+      { "text": "Nous avons annulé la réservation.", "ja": "私たちは予約を取り消しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "réserver", "meaningJa": "予約する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" }
+    ]
+  },
+  {
+    "id": "B1_017",
+    "term": "déménager",
+    "meaningJa": "引っ越す",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "déménager", "present3sg": "déménage", "pastParticiple": "déménagé" },
+    "topics": ["logement"],
+    "examples": [
+      { "text": "Nous déménageons le mois prochain.", "ja": "私たちは来月引っ越します。", "tense": "présent" },
+      { "text": "Nous avons déménagé en juin.", "ja": "私たちは6月に引っ越しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "déménagement", "meaningJa": "引っ越し", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_018",
+    "term": "louer",
+    "meaningJa": "借りる／貸す（賃貸する）",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "louer", "present3sg": "loue", "pastParticiple": "loué" },
+    "topics": ["logement", "voyage"],
+    "examples": [
+      { "text": "Je loue un appartement en centre-ville.", "ja": "私は都心でアパートを借りています。", "tense": "présent" },
+      { "text": "Nous avons loué une voiture pour le week-end.", "ja": "私たちは週末に車を借りました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "location", "meaningJa": "賃貸／レンタル", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_019",
+    "term": "réparer",
+    "meaningJa": "修理する／直す",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "réparer", "present3sg": "répare", "pastParticiple": "réparé" },
+    "topics": ["technologie", "maison"],
+    "examples": [
+      { "text": "Il répare mon ordinateur.", "ja": "彼は私のパソコンを修理しています。", "tense": "présent" },
+      { "text": "Il a réparé la machine hier.", "ja": "彼は昨日その機械を修理しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "réparation", "meaningJa": "修理", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" },
+      { "term": "panne", "meaningJa": "故障", "pos": { "code": "noun", "ja": "名詞" }, "relation": "related" }
+    ]
+  },
+  {
+    "id": "B1_020",
+    "term": "résoudre",
+    "meaningJa": "解決する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "résoudre", "present3sg": "résout", "pastParticiple": "résolu" },
+    "topics": ["problème", "travail"],
+    "examples": [
+      { "text": "Nous résolvons ce problème ensemble.", "ja": "私たちはこの問題を一緒に解決しています。", "tense": "présent" },
+      { "text": "Nous avons résolu la panne rapidement.", "ja": "私たちは故障を素早く解決しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "solution", "meaningJa": "解決策", "pos": { "code": "noun", "ja": "名詞" }, "relation": "related" }
+    ]
+  },
+  {
+    "id": "B1_021",
+    "term": "expliquer",
+    "meaningJa": "説明する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "expliquer", "present3sg": "explique", "pastParticiple": "expliqué" },
+    "topics": ["communication", "études"],
+    "examples": [
+      { "text": "Elle explique la règle clairement.", "ja": "彼女は規則を分かりやすく説明します。", "tense": "présent" },
+      { "text": "Elle a expliqué le système en détail.", "ja": "彼女はその仕組みを詳しく説明しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "explication", "meaningJa": "説明", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_022",
+    "term": "décrire",
+    "meaningJa": "描写する／説明する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "décrire", "present3sg": "décrit", "pastParticiple": "décrit" },
+    "topics": ["communication", "études"],
+    "examples": [
+      { "text": "Peux-tu décrire la scène ?", "ja": "その場面を描写できますか。", "tense": "présent" },
+      { "text": "Il a décrit le suspect avec précision.", "ja": "彼は容疑者を正確に描写しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "description", "meaningJa": "描写／説明", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_023",
+    "term": "prévoir",
+    "meaningJa": "予定する／見込む・予測する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "prévoir", "present3sg": "prévoit", "pastParticiple": "prévu" },
+    "topics": ["planification", "travail"],
+    "examples": [
+      { "text": "Je prévois un voyage en mai.", "ja": "私は5月に旅行を予定しています。", "tense": "présent" },
+      { "text": "Nous avons prévu un budget.", "ja": "私たちは予算を立てました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "prévision", "meaningJa": "予測／見込み", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_024",
+    "term": "empêcher",
+    "meaningJa": "妨げる／阻止する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "empêcher", "present3sg": "empêche", "pastParticiple": "empêché" },
+    "topics": ["sécurité", "travail"],
+    "examples": [
+      { "text": "La pluie empêche le match.", "ja": "雨で試合ができません。", "tense": "présent" },
+      { "text": "Cela a empêché le départ.", "ja": "それが出発を妨げました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "prévenir", "meaningJa": "未然に防ぐ", "pos": { "code": "verb", "ja": "動詞" }, "relation": "synonym" }
+    ]
+  },
+  {
+    "id": "B1_025",
+    "term": "permettre",
+    "meaningJa": "許可する／可能にする",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "permettre", "present3sg": "permet", "pastParticiple": "permis" },
+    "topics": ["règles", "administration"],
+    "examples": [
+      { "text": "Le badge permet d'entrer.", "ja": "そのバッジで入場できます。", "tense": "présent" },
+      { "text": "On m'a permis d'entrer hier.", "ja": "昨日は入ることを許可されました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "interdire", "meaningJa": "禁止する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" },
+      { "term": "permission", "meaningJa": "許可", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_026",
+    "term": "interdire",
+    "meaningJa": "禁止する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "interdire", "present3sg": "interdit", "pastParticiple": "interdit" },
+    "topics": ["règles", "administration"],
+    "examples": [
+      { "text": "Le règlement interdit de fumer ici.", "ja": "ここでは規則で喫煙が禁止されています。", "tense": "présent" },
+      { "text": "On a interdit l'accès au public.", "ja": "一般の立ち入りが禁止されました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "permettre", "meaningJa": "許可する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "antonym" },
+      { "term": "interdiction", "meaningJa": "禁止", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_027",
+    "term": "soutenir",
+    "meaningJa": "支援する／支える",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "soutenir", "present3sg": "soutient", "pastParticiple": "soutenu" },
+    "topics": ["société", "travail"],
+    "examples": [
+      { "text": "Je soutiens mes collègues.", "ja": "私は同僚を支援します。", "tense": "présent" },
+      { "text": "Nous avons soutenu l'équipe locale.", "ja": "私たちは地元チームを応援しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "soutien", "meaningJa": "支援", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  {
+    "id": "B1_028",
+    "term": "vérifier",
+    "meaningJa": "確認する／検証する",
+    "cefr": "B1",
+    "pos": { "code": "verb", "ja": "動詞" },
+    "principalParts": { "infinitive": "vérifier", "present3sg": "vérifie", "pastParticiple": "vérifié" },
+    "topics": ["travail", "études"],
+    "examples": [
+      { "text": "Je vérifie les données avant d'envoyer.", "ja": "送る前にデータを確認します。", "tense": "présent" },
+      { "text": "J'ai vérifié toutes les informations.", "ja": "私はすべての情報を確認しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "vérification", "meaningJa": "確認／検証", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+
+  { "id": "B1_029",
+    "term": "avantage",
+    "meaningJa": "利点／メリット",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "avantages" },
+    "topics": ["argumentation"],
+    "examples": [
+      { "text": "Quel est l'avantage de ce produit ?", "ja": "この製品の利点は何ですか。", "tense": "présent" },
+      { "text": "Nous avons présenté les avantages au client.", "ja": "私たちは顧客に利点を提示しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "inconvénient", "meaningJa": "欠点", "pos": { "code": "noun", "ja": "名詞" }, "relation": "antonym" }
+    ]
+  },
+  { "id": "B1_030",
+    "term": "inconvénient",
+    "meaningJa": "欠点／デメリット",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "inconvénients" },
+    "topics": ["argumentation"],
+    "examples": [
+      { "text": "Cet inconvénient est important.", "ja": "この欠点は重要です。", "tense": "présent" },
+      { "text": "Ils ont discuté des inconvénients hier.", "ja": "彼らは昨日、欠点について議論しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "avantage", "meaningJa": "利点", "pos": { "code": "noun", "ja": "名詞" }, "relation": "antonym" }
+    ]
+  },
+  { "id": "B1_031",
+    "term": "habitude",
+    "meaningJa": "習慣",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "habitudes" },
+    "topics": ["vie quotidienne"],
+    "examples": [
+      { "text": "J'ai l'habitude de lire le soir.", "ja": "私は夜に読書する習慣があります。", "tense": "présent" },
+      { "text": "Nous avons changé nos habitudes l'an dernier.", "ja": "私たちは昨年、習慣を変えました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "s'habituer", "meaningJa": "慣れる", "pos": { "code": "verb", "ja": "動詞" }, "relation": "derivation" }
+    ]
+  },
+  { "id": "B1_032",
+    "term": "solution",
+    "meaningJa": "解決策／答え",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "solutions" },
+    "topics": ["problème"],
+    "examples": [
+      { "text": "Cette solution est pratique.", "ja": "この解決策は実用的です。", "tense": "présent" },
+      { "text": "Nous avons trouvé une bonne solution.", "ja": "私たちは良い解決策を見つけました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "résoudre", "meaningJa": "解決する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_033",
+    "term": "occasion",
+    "meaningJa": "機会",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "occasions" },
+    "topics": ["opportunité"],
+    "examples": [
+      { "text": "C'est une belle occasion d'apprendre.", "ja": "これは学ぶ良い機会です。", "tense": "présent" },
+      { "text": "J'ai saisi l'occasion de parler avec elle.", "ja": "私は彼女と話す機会をつかみました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "profiter (de)", "meaningJa": "（〜を）活かす", "pos": { "code": "verb", "ja": "動詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_034",
+    "term": "panne",
+    "meaningJa": "故障／不調",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "pannes" },
+    "topics": ["technologie", "transport"],
+    "examples": [
+      { "text": "Il y a une panne de courant.", "ja": "停電があります。", "tense": "présent" },
+      { "text": "Nous avons eu une panne sur l'autoroute.", "ja": "高速道路で故障しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "réparer", "meaningJa": "修理する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_035",
+    "term": "remboursement",
+    "meaningJa": "返金／払い戻し",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "remboursements" },
+    "topics": ["achat", "argent"],
+    "examples": [
+      { "text": "Je demande un remboursement.", "ja": "返金を求めます。", "tense": "présent" },
+      { "text": "Ils ont effectué le remboursement hier.", "ja": "彼らは昨日返金を実行しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "rembourser", "meaningJa": "返金する／返済する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "derivation" }
+    ]
+  },
+  { "id": "B1_036",
+    "term": "réduction",
+    "meaningJa": "割引／値下げ",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "réductions" },
+    "topics": ["achat"],
+    "examples": [
+      { "text": "Il y a une réduction de 20 %.", "ja": "20％の割引があります。", "tense": "présent" },
+      { "text": "Nous avons obtenu une réduction spéciale.", "ja": "私たちは特別割引を得ました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "réduire", "meaningJa": "減らす／値下げする", "pos": { "code": "verb", "ja": "動詞" }, "relation": "derivation" }
+    ]
+  },
+  { "id": "B1_037",
+    "term": "délai",
+    "meaningJa": "期限／猶予期間",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "délais" },
+    "topics": ["administration", "temps"],
+    "examples": [
+      { "text": "Le délai est trop court.", "ja": "期限が短すぎます。", "tense": "présent" },
+      { "text": "Ils ont prolongé le délai d'une semaine.", "ja": "彼らは期限を1週間延長しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "retard", "meaningJa": "遅れ", "pos": { "code": "noun", "ja": "名詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_038",
+    "term": "budget",
+    "meaningJa": "予算",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "budgets" },
+    "topics": ["argent", "planification"],
+    "examples": [
+      { "text": "Nous avons un budget limité.", "ja": "私たちには限られた予算があります。", "tense": "présent" },
+      { "text": "Nous avons établi le budget hier.", "ja": "私たちは昨日予算を作成しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "prévoir", "meaningJa": "予定する／見込む", "pos": { "code": "verb", "ja": "動詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_039",
+    "term": "objectif",
+    "meaningJa": "目標／目的",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "objectifs" },
+    "topics": ["travail", "études"],
+    "examples": [
+      { "text": "Nous fixons des objectifs clairs.", "ja": "私たちは明確な目標を設定します。", "tense": "présent" },
+      { "text": "Nous avons atteint nos objectifs.", "ja": "私たちは目標を達成しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "but", "meaningJa": "目的／ゴール", "pos": { "code": "noun", "ja": "名詞" }, "relation": "synonym" }
+    ]
+  },
+  { "id": "B1_040",
+    "term": "preuve",
+    "meaningJa": "証拠",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "preuves" },
+    "topics": ["justice", "argumentation"],
+    "examples": [
+      { "text": "J'ai une preuve de paiement.", "ja": "支払いの証拠があります。", "tense": "présent" },
+      { "text": "Nous avons présenté des preuves au tribunal.", "ja": "私たちは法廷で証拠を提出しました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "vérifier", "meaningJa": "確認する／検証する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_041",
+    "term": "conseil",
+    "meaningJa": "助言／アドバイス",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "conseils" },
+    "topics": ["communication", "aide"],
+    "examples": [
+      { "text": "Merci pour vos conseils.", "ja": "助言をありがとうございます。", "tense": "présent" },
+      { "text": "Il a donné des conseils utiles.", "ja": "彼は役立つ助言をしました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "conseiller", "meaningJa": "助言する", "pos": { "code": "verb", "ja": "動詞" }, "relation": "derivation" },
+      { "term": "avis", "meaningJa": "意見", "pos": { "code": "noun", "ja": "名詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_042",
+    "term": "avis",
+    "meaningJa": "意見／見解",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "avis" },
+    "topics": ["communication"],
+    "examples": [
+      { "text": "Quel est ton avis ?", "ja": "君の意見は？", "tense": "présent" },
+      { "text": "Ils ont donné leur avis après la réunion.", "ja": "彼らは会議後に意見を述べました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "opinion", "meaningJa": "意見", "pos": { "code": "noun", "ja": "名詞" }, "relation": "synonym" }
+    ]
+  },
+  { "id": "B1_043",
+    "term": "expérience",
+    "meaningJa": "経験",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "expériences" },
+    "topics": ["travail", "études"],
+    "examples": [
+      { "text": "J'ai de l'expérience dans ce domaine.", "ja": "私はこの分野で経験があります。", "tense": "présent" },
+      { "text": "J'ai acquis beaucoup d'expérience l'an dernier.", "ja": "昨年多くの経験を積みました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "expérimenté(e)", "meaningJa": "経験豊かな", "pos": { "code": "adj", "ja": "形容詞" }, "relation": "derivation" }
+    ]
+  },
+  { "id": "B1_044",
+    "term": "qualité",
+    "meaningJa": "品質／質",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "qualités" },
+    "topics": ["achat"],
+    "examples": [
+      { "text": "La qualité est excellente.", "ja": "品質は素晴らしいです。", "tense": "présent" },
+      { "text": "Nous avons amélioré la qualité du service.", "ja": "サービスの質を向上させました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "quantité", "meaningJa": "量", "pos": { "code": "noun", "ja": "名詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_045",
+    "term": "quantité",
+    "meaningJa": "量／分量",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "f",
+    "variants": { "plural": "quantités" },
+    "topics": ["achat"],
+    "examples": [
+      { "text": "La quantité commandée est suffisante.", "ja": "注文した量は十分です。", "tense": "présent" },
+      { "text": "Nous avons réduit la quantité hier.", "ja": "私たちは昨日、量を減らしました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "qualité", "meaningJa": "質", "pos": { "code": "noun", "ja": "名詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_046",
+    "term": "risque",
+    "meaningJa": "危険／リスク",
+    "cefr": "B1",
+    "pos": { "code": "noun", "ja": "名詞" },
+    "gender": "m",
+    "variants": { "plural": "risques" },
+    "topics": ["santé", "sécurité"],
+    "examples": [
+      { "text": "Ce travail comporte des risques.", "ja": "この仕事には危険が伴います。", "tense": "présent" },
+      { "text": "Nous avons pris un risque calculé.", "ja": "私たちは計算されたリスクを取った。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "éviter", "meaningJa": "避ける", "pos": { "code": "verb", "ja": "動詞" }, "relation": "related" }
+    ]
+  },
+  { "id": "B1_047",
+    "term": "disponible",
+    "meaningJa": "利用可能な／手が空いている",
+    "cefr": "B1",
+    "pos": { "code": "adj", "ja": "形容詞" },
+    "topics": ["service", "travail"],
+    "examples": [
+      { "text": "Le produit est disponible en ligne.", "ja": "その製品はオンラインで入手可能です。", "tense": "présent" },
+      { "text": "Il a été disponible toute la journée.", "ja": "彼は一日中手が空いていました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "disponibilité", "meaningJa": "利用可能性／空き", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  { "id": "B1_048",
+    "term": "fiable",
+    "meaningJa": "信頼できる／確実な",
+    "cefr": "B1",
+    "pos": { "code": "adj", "ja": "形容詞" },
+    "topics": ["technologie", "service"],
+    "examples": [
+      { "text": "Ce système est très fiable.", "ja": "このシステムはとても信頼できます。", "tense": "présent" },
+      { "text": "Le service a été fiable pendant la crise.", "ja": "危機の間もサービスは信頼できました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "fiabilité", "meaningJa": "信頼性", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" }
+    ]
+  },
+  { "id": "B1_049",
+    "term": "raisonnable",
+    "meaningJa": "妥当な／分別のある",
+    "cefr": "B1",
+    "pos": { "code": "adj", "ja": "形容詞" },
+    "topics": ["prix", "jugement"],
+    "examples": [
+      { "text": "Le prix est raisonnable.", "ja": "価格は妥当です。", "tense": "présent" },
+      { "text": "L'offre a été jugée raisonnable.", "ja": "その提案は妥当だと判断されました。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "raisonnablement", "meaningJa": "分別をもって／妥当に", "pos": { "code": "adv", "ja": "副詞" }, "relation": "derivation" }
+    ]
+  },
+  { "id": "B1_050",
+    "term": "nécessaire",
+    "meaningJa": "必要な",
+    "cefr": "B1",
+    "pos": { "code": "adj", "ja": "形容詞" },
+    "topics": ["obligation"],
+    "examples": [
+      { "text": "C'est nécessaire pour voyager.", "ja": "旅行にはそれが必要です。", "tense": "présent" },
+      { "text": "Ça a été nécessaire dans ce cas.", "ja": "この場合にはそれが必要でした。", "tense": "passé composé" }
+    ],
+    "related": [
+      { "term": "nécessité", "meaningJa": "必要性", "pos": { "code": "noun", "ja": "名詞" }, "relation": "derivation" },
+      { "term": "inutile", "meaningJa": "不要な", "pos": { "code": "adj", "ja": "形容詞" }, "relation": "antonym" }
+    ]
+  }
+]
+
